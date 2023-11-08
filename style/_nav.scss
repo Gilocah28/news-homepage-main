@@ -1,0 +1,115 @@
+.nav-bar{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+
+    .navlinks{
+        display: flex;
+        gap: 1.5rem;
+        padding: 1rem;
+        li{
+            list-style: none;
+            a{
+                color: $Darkgrayishblue;
+                letter-spacing: 1px;
+                text-decoration: none;
+                transition: all 200ms ease-in-out;
+                &:hover{
+                    cursor: pointer;
+                    color: $Softred;
+                }
+            }
+        }
+
+
+        @include tablet{
+            display: none;
+            animation: fadeOut 500ms ease-in-out;
+            
+            li{
+                a{
+                    font-size: 20px;
+                }
+            }
+        }
+
+    }
+    .show{
+        @include tablet{
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            flex-direction: column;
+            width: 60%;
+            padding: 8rem 1.5rem;
+            background-color: white;
+            animation: fadeIn 500ms ease-in-out;
+            li{
+                margin-bottom: 1rem;
+                a{
+                    font-size: 20px;
+                }
+            }
+        }
+
+        @include mobile{
+            width: 75%;
+        }
+    }
+
+
+    .image-menu, .image-menu-close{
+        display: none;
+    }
+    .image-menu{
+        @include tablet{
+            z-index: 10;
+            display: block;
+        }
+    }
+    .image-menu-close{
+        @include tablet{
+            animation: fadeIn 500ms ease-in-out; 
+            z-index: 10;
+        }
+    }
+
+    .showImage{
+        display: none;
+        @include mobile{
+            display: block;
+        }
+    }
+
+    .hideImage{
+        display: none;
+        @include mobile{
+            display: none;
+        }
+    }
+    
+}
+
+
+@keyframes fadeIn {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+@keyframes fadeOut {
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+
+
+.backgoundColor{
+    @include tablet{
+        animation: fadeIn 500ms ease-in-out; 
+        background-color: rgba(0, 0, 0, 0.199);
+    }
+}
