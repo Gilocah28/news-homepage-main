@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
-
+@import 'mediaQuarries';
 $Softorange: hsl(35, 77%, 62%);
 $Softred: hsl(5, 85%, 63%);
 $Off-white: hsl(36, 100%, 99%);
@@ -7,8 +7,15 @@ $Grayishblue: hsl(233, 8%, 79%);
 $Darkgrayishblue: hsl(236, 13%, 42%);
 $Verydarkblue: hsl(240, 100%, 5%);
 
+$paddingBody: 4rem 6.5rem;
+$paddingMobile: 2rem;
 
 
+%displayFlex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 *{
     margin: 0;
@@ -18,4 +25,43 @@ $Verydarkblue: hsl(240, 100%, 5%);
 
 html{
     font-family: 'Inter', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-size: 15px;
+    position: relative;
+    animation: fadeIn 500ms ease-in-out;
+}
+
+.main-container{
+    padding: $paddingBody;
+    width: 100%;
+    height: 100vh;
+    
+    @include tablet{
+        animation: fadeIn 800ms ease-in-out;
+        padding: $paddingMobile;
+    }
+}
+
+@keyframes fadeIn {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+.opacity{
+    &::after{
+        content: '';
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: $Grayishblue;
+        opacity: .5;
+    }
 }
