@@ -1,6 +1,5 @@
 .main-landing{
     margin-top: 2rem;
-    border: 1px solid;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
@@ -9,13 +8,19 @@
     'imageContainer imageContainer darkContainer'
     'textContainer textContainer darkContainer';
 
-    @include mobile {
+    @include tablet {
         grid-template-columns: 1fr;
         grid-template-areas:
         'imageContainer'
         'textContainer'
         'darkContainer'
         ;
+        animation: fadeIn 500ms ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from{opacity: 0;}
+        to{opacity: 1;}
     }
 
     .image-container{

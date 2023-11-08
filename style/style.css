@@ -173,16 +173,24 @@ body {
 
 .main-landing {
   margin-top: 2rem;
-  border: 1px solid;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
   grid-template-areas: "imageContainer imageContainer darkContainer" "imageContainer imageContainer darkContainer" "textContainer textContainer darkContainer";
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .main-landing {
     grid-template-columns: 1fr;
     grid-template-areas: "imageContainer" "textContainer" "darkContainer";
+    animation: fadeIn 500ms ease-in-out;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 .main-landing .image-container {
