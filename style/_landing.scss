@@ -1,0 +1,126 @@
+.main-landing{
+    margin-top: 2rem;
+    border: 1px solid;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    grid-template-areas: 
+    'imageContainer imageContainer darkContainer'
+    'imageContainer imageContainer darkContainer'
+    'textContainer textContainer darkContainer';
+
+    @include mobile {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        'imageContainer'
+        'textContainer'
+        'darkContainer'
+        ;
+    }
+
+    .image-container{
+        grid-area: imageContainer;
+        picture{
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .text-container{
+        grid-area: textContainer;
+        display: flex;
+        column-gap: 1rem;
+
+        @include tablet{
+            flex-direction: column;
+        }
+
+        .text-title-container{
+            flex: 1;
+            h1{
+                font-size: 3.5rem;
+                line-height: 4rem;
+
+                @include tablet{
+                    font-size: 3rem;
+                    line-height: 3.3rem;
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+        .subTitle-container{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            p{
+                color: $Darkgrayishblue;
+                letter-spacing: 1px;
+                line-height: 1.5rem;
+            }
+            .add{
+                width: 50%;
+                padding: .9rem 1rem;
+                border: none;
+                font-size: .8rem;
+                color: $Off-white;
+                background-color: $Softred;
+                letter-spacing: 2px;
+                font-weight: 700;
+                margin-top: 1rem;
+
+
+                &:hover{
+                    transition: all 500ms linear;
+                    cursor: pointer;
+                    background-color: $Verydarkblue;
+                }
+            }
+        }
+    }
+
+    .dark-container{
+        grid-area: darkContainer;
+        background-color: $Verydarkblue;
+        color: white;
+        padding: 1rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        .divider-container{
+            h2{
+                color: $Softorange;
+                margin-bottom: 1.5rem;
+            }
+            p{
+                color: $Grayishblue;
+            }
+            .title-darkcon{
+                font-weight: 800;
+                color: $Off-white;
+                margin-bottom: 1rem;
+
+
+                &:hover{
+                    transition: color 200ms ease;
+                    cursor: pointer;
+                    color: $Softorange;
+
+                }
+            }
+            .subtext{
+                margin-bottom: 2rem;
+            }
+        }
+
+        .line{
+            border-bottom: 1px solid $Grayishblue;
+        }
+    }
+
+
+
+}

@@ -10,6 +10,9 @@
         display: flex;
         gap: 1.5rem;
         padding: 1rem;
+        @include tablet{
+            height: 100%;
+        }
         li{
             list-style: none;
             a{
@@ -40,7 +43,7 @@
     .show{
         @include tablet{
             display: block;
-            position: absolute;
+            position: fixed;
             top: 0;
             right: 0;
             bottom: 0;
@@ -49,6 +52,7 @@
             padding: 8rem 1.5rem;
             background-color: white;
             animation: fadeIn 500ms ease-in-out;
+            
             li{
                 margin-bottom: 1rem;
                 a{
@@ -65,15 +69,19 @@
 
     .image-menu, .image-menu-close{
         display: none;
+        
     }
     .image-menu{
         @include tablet{
             z-index: 10;
             display: block;
+
         }
     }
     .image-menu-close{
         @include tablet{
+            position: fixed;
+            right: 1rem;
             animation: fadeIn 500ms ease-in-out; 
             z-index: 10;
         }
@@ -81,14 +89,14 @@
 
     .showImage{
         display: none;
-        @include mobile{
+        @include tablet{
             display: block;
         }
     }
 
     .hideImage{
         display: none;
-        @include mobile{
+        @include tablet{
             display: none;
         }
     }

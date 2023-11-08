@@ -7,7 +7,7 @@ $Grayishblue: hsl(233, 8%, 79%);
 $Darkgrayishblue: hsl(236, 13%, 42%);
 $Verydarkblue: hsl(240, 100%, 5%);
 
-$paddingBody: 4rem 6.5rem;
+$paddingBody: 4rem 8rem;
 $paddingMobile: 2rem;
 
 
@@ -29,20 +29,22 @@ html{
 
 body{
     width: 100%;
-    height: 100vh;
     font-size: 15px;
     position: relative;
     animation: fadeIn 500ms ease-in-out;
+    // @include tablet{
+        
+    // }
 }
 
 .main-container{
     padding: $paddingBody;
     width: 100%;
-    height: 100vh;
     background-color: white;
     
+    
     @include tablet{
-        animation: fadeIn 800ms ease-in-out;
+        animation: fadeIn 200ms ease-in-out;
         padding: $paddingMobile;
     }
 }
