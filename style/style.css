@@ -18,12 +18,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: hsl(36, 100%, 99%);
 }
 
 .main-container {
   padding: 1rem;
   width: 100%;
-  background-color: white;
 }
 @media screen and (max-width: 768px) {
   .main-container {
