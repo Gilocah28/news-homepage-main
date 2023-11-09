@@ -14,7 +14,7 @@ hamburgerMenuBtn.addEventListener('click', ()=>{
 })
 
 hamburgerMenuBtnClose.addEventListener('click',()=>{
-    navShowAndHide.classList.remove('show')
+    navShowAndHide.classList.toggle('show')
     hamburgerMenuBtn.classList.remove('hideImage')
     hamburgerMenuBtnClose.classList.remove('showImage')
     backgroundBlur.classList.remove('backgoundColor')

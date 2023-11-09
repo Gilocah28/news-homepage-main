@@ -7,8 +7,8 @@ $Grayishblue: hsl(233, 8%, 79%);
 $Darkgrayishblue: hsl(236, 13%, 42%);
 $Verydarkblue: hsl(240, 100%, 5%);
 
-$paddingBody: 4rem 8rem;
-$paddingMobile: 2rem;
+$paddingBody: 1rem;
+$paddingMobile: 1rem;
 
 
 %displayFlex{
@@ -25,13 +25,17 @@ $paddingMobile: 2rem;
 
 html{
     font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body{
     width: 100%;
+    min-height: 100vh;
     font-size: 15px;
     position: relative;
-    animation: fadeIn 500ms ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-container{
@@ -41,14 +45,8 @@ body{
     
     
     @include tablet{
-        animation: fadeIn 200ms ease-in-out;
         padding: $paddingMobile;
     }
-}
-
-@keyframes fadeIn {
-    from{opacity: 0;}
-    to{opacity: 1;}
 }
 
 .opacity{

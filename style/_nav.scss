@@ -1,10 +1,13 @@
 .nav-bar{
     width: 100%;
+    max-width: 1440px;
     height: 70px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 1;
+    
 
     .navlinks{
         display: flex;
@@ -19,7 +22,6 @@
                 color: $Darkgrayishblue;
                 letter-spacing: 1px;
                 text-decoration: none;
-                transition: all 200ms ease-in-out;
                 &:hover{
                     cursor: pointer;
                     color: $Softred;
@@ -30,7 +32,7 @@
 
         @include tablet{
             display: none;
-            animation: fadeOut 500ms ease-in-out;
+        
             
             li{
                 a{
@@ -48,10 +50,11 @@
             right: 0;
             bottom: 0;
             flex-direction: column;
-            width: 60%;
+            width: 75vw;
             padding: 8rem 1.5rem;
             background-color: white;
-            animation: fadeIn 500ms ease-in-out;
+            animation: fadeIn 200ms linear;
+            
             
             li{
                 margin-bottom: 1rem;
@@ -60,16 +63,11 @@
                 }
             }
         }
-
-        @include mobile{
-            width: 75%;
-        }
     }
 
 
     .image-menu, .image-menu-close{
         display: none;
-        
     }
     .image-menu{
         @include tablet{
@@ -82,7 +80,6 @@
         @include tablet{
             position: fixed;
             right: 1rem;
-            animation: fadeIn 500ms ease-in-out; 
             z-index: 10;
         }
     }
@@ -105,19 +102,18 @@
 
 
 @keyframes fadeIn {
-    from{opacity: 0;}
-    to{opacity: 1;}
+    from{width: 0;}
+    to{width: 75vw;}
 }
 
 @keyframes fadeOut {
-    from{opacity: 1;}
-    to{opacity: 0;}
+    from{width: 75vw;}
+    to{width: 0;}
 }
 
 
 .backgoundColor{
-    @include tablet{
-        animation: fadeIn 500ms ease-in-out; 
+    @include tablet{       
         background-color: rgba(0, 0, 0, 0.199);
     }
 }
