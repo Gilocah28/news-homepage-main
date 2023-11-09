@@ -46,7 +46,7 @@ body {
 
 .nav-bar {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1080px;
   height: 70px;
   margin: 0 auto;
   display: flex;
@@ -160,7 +160,7 @@ body {
 }
 
 .main-landing {
-  max-width: 1440px;
+  max-width: 1080px;
   margin: 0 auto;
   margin-top: 1rem;
   display: grid;
@@ -278,7 +278,7 @@ body {
 .gaming-container {
   margin: 0 auto;
   margin-top: 2rem;
-  max-width: 1440px;
+  max-width: 1080px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
